@@ -214,7 +214,7 @@ class User(db.Model, UserMixin):
         db.session.commit()
         return self
     
-    def save_profile_picture(self, image_data, filename):
+    def save_pfp(self, image_data, filename):
         """For saving profile picture."""
         try:
             user_dir = os.path.join(app.config['UPLOAD_FOLDER'], self.uid)
